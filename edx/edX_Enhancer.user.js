@@ -16,7 +16,7 @@
     $('#course-info-progress > section  dl dd').each((v, e) => {
         const el = $(e);
         const n = eval(el.html());
-        (n == 1 | Number.isNaN(n)) ? el.css('color','black') : el.css('color','#A70131', 'font-weight', 'bold');
+        if (n != 1 && !Number.isNaN(n)) el.css({'color': '#A70131', 'font-weight': 'bold'});
     });
 })();
 
